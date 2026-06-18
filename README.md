@@ -1,2 +1,2 @@
-# portfolio
-HTML5 Semantic Portfolio Website with Accessibility and SEO Features
+# portfolio-website
+HTML5 Semantic Portfolio Website Internship Project
