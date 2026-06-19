@@ -18,35 +18,52 @@
 
 <header>
 <h1>Vinod Kumar</h1>
+<button id="themeBtn">Dark Mode</button>
+<nav>
+    <h2>My Portfolio</h2>
 
-<nav aria-label="Primary Navigation">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
 </header>
-
-<main id="main-content">
+<main id="main-content" class="container">
 
 <section>
 <h2>Welcome</h2>
 <p>I am a B.Tech IT student interested in Web Development.</p>
 </section>
 
-<article>
-<h2>My Goal</h2>
-<p>To become a successful software engineer.</p>
-</article>
+<section>
+<h2>About Me</h2>
+<p>I am studying B.Tech in Information Technology.</p>
+</section>
+
+<section>
+<h2>Projects</h2>
+<p>Portfolio Website, Smart Anti-Snake Farmer Boots.</p>
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>Email: vinodbhukya@gmail.com</p>
+</section>
 
 </main>
 
 <footer>
 <p>&copy; 2026 Vinod Kumar</p>
 </footer>
+<script>
+const btn = document.getElementById("themeBtn");
 
+btn.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+});
+</script>
 </body>
 </html>

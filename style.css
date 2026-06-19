@@ -1,12 +1,26 @@
+:root{
+    --bg-color:white;
+    --text-color:black;
+    --header-color:#333;
+    --card-color:#f5f5f5;
+}
+
+.dark{
+    --bg-color:#121212;
+    --text-color:white;
+    --header-color:#000;
+    --card-color:#222;
+}
 body{
 font-family:Arial,sans-serif;
 margin:0;
 padding:0;
 line-height:1.6;
+background:var(--bg-color);
+color:var(--text-color);
 }
-
 header{
-background:#333;
+background:var(--header-color);
 color:white;
 padding:20px;
 text-align:center;
@@ -30,7 +44,7 @@ padding:20px;
 }
 
 footer{
-background:#333;
+background:var(--header-color);
 color:white;
 text-align:center;
 padding:10px;
@@ -40,4 +54,60 @@ button:focus,
 input:focus,
 textarea:focus{
 outline:3px solid blue;
+}
+/* Flexbox Navigation */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+/* Grid Layout */
+.container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+/* Cards */
+
+section{
+    background:var(--card-color);
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+section:hover{
+    transform:translateY(-5px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive Design */
+@media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+}
+#themeBtn{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
 }
